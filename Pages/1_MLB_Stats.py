@@ -4,13 +4,13 @@ import plotly.express as px
 
 st.set_page_config(page_title = 'MLB Player Stats',layout='wide')
 
-hittingmajors = pd.read_csv("C:/Users/Brett/Fantasy Baseball Practice/EDBrosteredhitters.csv")
+hittingmajors = pd.read_csv("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/EDBrosteredhitters.csv")
 hittingmajors = hittingmajors.drop(columns=['ID','Pos','Status','Opponent','FANTRAXID','IDFANGRAPHS','MLBID'])
 hittingmajors = hittingmajors.rename(columns={'Eligible': 'Pos'})
 team_col = hittingmajors.pop('team_name')
 hittingmajors.insert(3,'team_name',team_col)
 
-pitchingmajors = pd.read_csv("C:/Users/Brett/Fantasy Baseball Practice/EDBrosteredpitchers.csv")
+pitchingmajors = pd.read_csv("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/EDBrosteredpitchers.csv")
 pitchingmajors = pitchingmajors.drop(columns=['ID','Pos','Status','Opponent','FANTRAXID','IDFANGRAPHS','MLBID'])
 team_col = pitchingmajors.pop('team_name')
 pitchingmajors.insert(3,'team_name',team_col)
