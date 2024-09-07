@@ -7,14 +7,14 @@ st.set_page_config(page_title = 'MiLB Player Stats',layout='wide')
 hittingminors = pd.read_csv("https://raw.githubusercontent.com/bamc021/st.EDB_Dashboard/main/CSV%20Files/Minors%20Stats%20for%20Fantasy%20-%20Batters.csv")
 hittingminors = hittingminors[hittingminors['EDB Team'].notna()]
 hittingminors = hittingminors.drop(columns=['TWTC Team','BL Team','PlayerId'])
-hittingminors - hittingminors.drop(hittingminors.column[0],axis=1)
+hittingminors = hittingminors.drop(hittingminors.column[0],axis=1)
 team_col = hittingminors.pop('EDB Team')
 hittingminors.insert(3,'EDB Team',team_col)
 
 pitchingminors = pd.read_csv("https://raw.githubusercontent.com/bamc021/st.EDB_Dashboard/main/CSV%20Files/Minors%20Stats%20for%20Fantasy%20-%20Pitchers.csv")
 pitchingminors = pitchingminors[pitchingminors['EDB Team'].notna()]
 pitchingminors = pitchingminors.drop(columns=['TWTC Team','BL Team','PlayerId',''])
-pitchingminors - pitchingminors.drop(hittingminors.column[0],axis=1)
+pitchingminors = pitchingminors.drop(hittingminors.column[0],axis=1)
 team_col = pitchingminors.pop('EDB Team')
 pitchingminors.insert(3,'EDB Team',team_col)
 
