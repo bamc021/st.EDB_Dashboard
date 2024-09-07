@@ -4,13 +4,13 @@ import plotly.express as px
 
 st.set_page_config(page_title = 'MiLB Player Stats',layout='wide')
 
-hittingminors = pd.read_excel("C:/Users/Brett/Fantasy Baseball Practice/Minors Stats for Fantasy - Batters.xlsx")
+hittingminors = pd.read_excel("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/Minors Stats for Fantasy - Batters.xlsx")
 hittingminors = hittingminors[hittingminors['EDB Team'].notna()]
 hittingminors = hittingminors.drop(columns=['TWTC Team','BL Team','PlayerId'])
 team_col = hittingminors.pop('EDB Team')
 hittingminors.insert(3,'EDB Team',team_col)
 
-pitchingminors = pd.read_excel("C:/Users/Brett/Fantasy Baseball Practice/Minors Stats for Fantasy - Pitchers.xlsx")
+pitchingminors = pd.read_excel("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/Minors Stats for Fantasy - Pitchers.xlsx")
 pitchingminors = pitchingminors[pitchingminors['EDB Team'].notna()]
 pitchingminors = pitchingminors.drop(columns=['TWTC Team','BL Team','PlayerId'])
 team_col = pitchingminors.pop('EDB Team')
