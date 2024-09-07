@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title = 'MLB Player Stats',layout='wide')
 
 hittingmajors = pd.read_csv("https://raw.githubusercontent.com/bamc021/st.EDB_Dashboard/main/CSV%20Files/EDBrosteredhitters.csv")
-hittingmajors = hittingmajors.drop(columns=['ID','Pos','Status','Opponent','FANTRAXID','IDFANGRAPHS','MLBID'])
+hittingmajors = hittingmajors.drop(columns=['ID','Pos','Status','Opponent','FANTRAXID','IDFANGRAPHS','MLBID','Swings','Z-Pitches','Z-Swings','O-Pitches','O-Swings'])
 hittingmajors = hittingmajors.rename(columns={'Eligible': 'Pos'})
 team_col = hittingmajors.pop('team_name')
 hittingmajors.insert(3,'team_name',team_col)
