@@ -4,8 +4,8 @@ import plotly.express as px
 
 st.set_page_config(page_title = 'Team Stats',layout='wide')
 
-teamhitting = pd.read_csv("C:/Users/Brett/Fantasy Baseball Practice/EDBteamhitting.csv")
-teampitching = pd.read_csv("C:/Users/Brett/Fantasy Baseball Practice/EDBteampitching.csv")
+teamhitting = pd.read_csv("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/EDBteamhitting.csv")
+teampitching = pd.read_csv("https://github.com/bamc021/st.EDB_Dashboard/blob/main/CSV%20Files/EDBteampitching.csv")
 
 teamhitting_vars = teamhitting.columns.tolist()
 teampitching_vars = teampitching.columns.tolist()
