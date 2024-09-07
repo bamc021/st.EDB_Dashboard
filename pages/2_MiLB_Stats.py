@@ -42,6 +42,9 @@ with col3:
 with col4:
     minorpitch_yaxis = st.selectbox('Y Axis',minpitchplotvars,index=10)
 
-minorpitchfig = px.scatter(pitchingminors,x=minorpitch_xaxis,y=minorpitch_yaxis,color='EDB Team',hover_name='Name')
-st.plotly_chart(minorpitchfig)
+try:
+    minorpitchfig = px.scatter(pitchingminors, x=minorpitch_xaxis, y=minorpitch_yaxis, color='EDB Team', hover_name='Name')
+    st.plotly_chart(minorpitchfig)
+except Exception as e:
+    st.error(f"Error creating pitching plot: {e}")
 st.dataframe(pitchingminors,hide_index=True)
